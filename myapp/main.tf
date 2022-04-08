@@ -4,7 +4,7 @@ resource "random_integer" "ri" {
 }
 
 resource "azurerm_resource_group" "rg" {
-	name = "myrg-${random_integer.ri.result}
+	name = "myrg-${random_integer.ri.result}"
 	location = "eastus"
 }
 
