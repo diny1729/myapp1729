@@ -3,7 +3,7 @@ resource "random_integer" "ri" {
   max = 33333
 }
 
-resource "azurerm_resource_group" "rg"
+resource "azurerm_resource_group" "rg" {
   name = "myrg-${random_integer.ri.result}
   location = "eastus"
 }
@@ -15,6 +15,7 @@ resource "azurerm_app_service_plan" "appserviceplan" {
   sku { 
     tier = "free"
 	size = "f1"
+  }
 }
 
 
